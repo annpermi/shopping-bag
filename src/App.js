@@ -9,11 +9,11 @@ function App() {
   const [todos, setTodos] = useState([
     {
       id: 1,
-      text: "Compile the Spring app for deployment",
+      text: "Bread",
       isCompleted: false
     },
-    { id: 2, text: "Open port 8080", isCompleted: false },
-    { id: 3, text: "SSH into the VM", isCompleted: false }
+    { id: 2, text: "Fruits", isCompleted: false },
+    { id: 3, text: "Fish", isCompleted: false }
   ]);
   const [value, setValue] = useState("");
   const [isEdited, setIsEdited] = useState(false);
@@ -52,7 +52,7 @@ function App() {
     if (!isEdited) {
       const newTodos = [
         ...todos,
-        { id: todos.length + 1, text: value, isCompleted: false }
+        { id: Math.floor(Math.random()*1000), text: value, isCompleted: false }
       ];
       setTodos(newTodos);
     } else {
